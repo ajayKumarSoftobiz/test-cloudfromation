@@ -1,0 +1,11 @@
+Resources:
+  MyLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: my-lambda-function
+      Code:
+        S3Bucket: tscc-test-bucket
+        S3Key: index.zip
+      Handler: index.handler
+      Role: arn:aws:iam::ACCOUNT_ID:role/lambda_basic_execution
+      Runtime: nodejs16.x
